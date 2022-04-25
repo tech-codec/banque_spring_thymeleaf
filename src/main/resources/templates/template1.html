@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"
+		th:href=@{/css/bootstrap.min.css}>
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		  <ul class="navbar-nav">
+		    <li class="nav-item active">
+		      <a class="nav-link" href="#">Active</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Link</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Link</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link disabled" href="#">Disabled</a>
+		    </li>
+		  </ul>
+		  <ul class="nav navbar-nav navbar-right">
+		    <li class="nav-item"><a class="nav-link" th:href="@{/login?logout}">Logout</a></li>
+		  </ul>
+	</nav>
+</header>
+<section layout:fragment="content"></section>
+<footer>
+	<div class="navbar fixed-bottom">
+		<small>@L'addesse de votre banque</small>
+	</div>
+</footer>
+</body>
+</html>
